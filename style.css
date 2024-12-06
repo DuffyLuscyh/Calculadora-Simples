@@ -1,3 +1,4 @@
+/* Estilo geral da página */
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -5,55 +6,61 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f4f4f4;
+    background-color: #f0f0f0;
 }
 
-.container {
-    text-align: center;
-    background: white;
-    padding: 20px;
+/* Estilo da calculadora */
+.calculadora {
+    background-color: #333;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h1 {
-    margin-bottom: 20px;
-    color: #333;
-}
-
-#result {
-    width: 100%;
-    height: 40px;
-    margin-bottom: 10px;
-    font-size: 18px;
-    text-align: right;
-    padding: 5px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
-
-.buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-}
-
-button {
+/* Exibição do visor */
+#visor {
+    width: 260px;
     height: 50px;
-    font-size: 18px;
-    background: #007BFF;
+    background-color: #222;
+    color: white;
+    font-size: 30px;
+    text-align: right;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para os botões */
+.botao {
+    width: 60px;
+    height: 60px;
+    background-color: #444;
     color: white;
     border: none;
     border-radius: 5px;
+    font-size: 24px;
+    margin: 5px;
     cursor: pointer;
-    transition: background 0.3s;
+    transition: background-color 0.3s;
 }
 
-button:hover {
-    background: #0056b3;
+.botao:hover {
+    background-color: #555;
 }
 
-button.zero {
-    grid-column: span 2;
+/* Estilo para os botões de operação */
+.botao-operacao {
+    background-color: #ff9500;
+}
+
+.botao-operacao:hover {
+    background-color: #e68900;
+}
+
+/* Layout dos botões */
+.calculadora-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
 }
