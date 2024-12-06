@@ -3,33 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora Simples</title>
+    <title>Calculadora</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Calculadora Simples</h1>
-        <input type="text" id="result" disabled>
-        <div class="buttons">
-            <button onclick="clearResult()">C</button>
-            <button onclick="appendValue('/')">/</button>
-            <button onclick="appendValue('*')">*</button>
-            <button onclick="appendValue('-')">-</button>
-            <button onclick="appendValue('7')">7</button>
-            <button onclick="appendValue('8')">8</button>
-            <button onclick="appendValue('9')">9</button>
-            <button onclick="appendValue('+')">+</button>
-            <button onclick="appendValue('4')">4</button>
-            <button onclick="appendValue('5')">5</button>
-            <button onclick="appendValue('6')">6</button>
-            <button onclick="appendValue('1')">1</button>
-            <button onclick="appendValue('2')">2</button>
-            <button onclick="appendValue('3')">3</button>
-            <button onclick="calculate()">=</button>
-            <button onclick="appendValue('0')" class="zero">0</button>
-            <button onclick="appendValue('.')">.</button>
+    <div class="calculadora">
+        <input type="text" id="visor" disabled>
+        <div class="calculadora-container">
+            <button class="botao" onclick="digitar(7)">7</button>
+            <button class="botao" onclick="digitar(8)">8</button>
+            <button class="botao" onclick="digitar(9)">9</button>
+            <button class="botao botao-operacao" onclick="operar('+')">+</button>
+
+            <button class="botao" onclick="digitar(4)">4</button>
+            <button class="botao" onclick="digitar(5)">5</button>
+            <button class="botao" onclick="digitar(6)">6</button>
+            <button class="botao botao-operacao" onclick="operar('-')">-</button>
+
+            <button class="botao" onclick="digitar(1)">1</button>
+            <button class="botao" onclick="digitar(2)">2</button>
+            <button class="botao" onclick="digitar(3)">3</button>
+            <button class="botao botao-operacao" onclick="operar('*')">*</button>
+
+            <button class="botao" onclick="digitar(0)">0</button>
+            <button class="botao" onclick="limpar()">C</button>
+            <button class="botao botao-operacao" onclick="operar('/')">/</button>
+            <button class="botao botao-operacao" onclick="calcular()">=</button>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
+
